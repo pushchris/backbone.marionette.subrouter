@@ -8,13 +8,11 @@
     } else {
         factory(_, Backbone);
     }
-}(function(_, Backbone){
+}(function(_, Backbone) {
     Marionette.SubRouter = Marionette.AppRouter.extend({
         constructor: function(prefix, options) {
  
-            var controller,
-                appRoutes,
-                routes = {};
+            var routes = {};
  
             // Prefix is optional, set to empty string if not passed
             this.prefix = prefix = prefix || "";
@@ -26,23 +24,19 @@
                             ? ""
                             : "/";
  
-            // if you want to match "books" and "books/" without creating separate routes, set this
+            // If you want to match "books" and "books/" without creating separate routes, set this
             // option to "true" and the sub-router will automatically create those routes for you.
             var createTrailingSlashRoutes = options && options.createTrailingSlashRoutes;
  
             if(this.appRoutes) {
  
-                appRoutes = this.appRoutes;
-                controller = this.controller;
- 
                 if(options && options.controller) {
-                    controller = options.controller;
+                    this.controller = options.controller;
                 }
  
-                _.each(appRoutes, function(callback, path) {
- 
+                _.each(this.appRoutes, function(callback, path) {
                     if(path) {
-                        // strip off any leading slashes in the sub-route path,
+                        // Strip off any leading slashes in the sub-route path,
                         // since we already handle inserting them when needed.
                         if(path.substr(0) === "/") {
                             path = path.substr(1, path.length);
@@ -54,7 +48,7 @@
                             routes[prefix + this.separator + path + "/"] = callback;
                         }
                     } else {
-                        // default routes (those with a path equal to the empty string)
+                        // Default routes (those with a path equal to the empty string)
                         // are simply registered using the prefix as the route path.
                         routes[prefix] = callback;
  
@@ -62,12 +56,10 @@
                             routes[prefix + "/"] = callback;
                         }
                     }
- 
                 }, this);
  
                 // Override the local sub-routes with the fully-qualified routes that we just set up.
                 this.appRoutes = routes;
- 
             }
  
             Marionette.AppRouter.prototype.constructor.call(this, options);
@@ -90,5 +82,4 @@
     });
  
     return Marionette.SubRouter;
- 
 });
