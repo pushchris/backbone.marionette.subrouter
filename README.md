@@ -1,4 +1,4 @@
-backbone.marionette.subrouter
+Backbone Marionette Subrouter
 =============================
 
 A Backbone Marionette Subrouter
