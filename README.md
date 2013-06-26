@@ -5,7 +5,7 @@ The Backbone Marionette Documentation suggests splitting controllers and routers
 
 Backbone Marionette Subrouter extends the Marionette AppRouter and allows for multiple smaller routers to be used in conglomeration with the base router. The base router no longer needs to be enormous and can instead be relegated to delegating paths to the new subrouters.
 
-The Backbone marionetter Subrouter is based heavily off of the work on the [Backbone SubRoute by Dave Cadwallader](https://github.com/ModelN/backbone.subroute)
+The Backbone Marionette Subrouter is based heavily off of the work on the [Backbone SubRoute by Dave Cadwallader](https://github.com/ModelN/backbone.subroute).
 
 Usage
 =====
