@@ -7,12 +7,11 @@ Backbone Marionette Subrouter extends the Marionette AppRouter and allows for mu
 
 The Backbone Marionette Subrouter is based heavily off of the work on the [Backbone SubRoute by Dave Cadwallader](https://github.com/ModelN/backbone.subroute).
 
-Usage
-=====
+##Usage
 
 The Marionette SubRouter works indentical to a normal AppRouter with the exception that it takes a prefix as its first parameter.
 
-So lets say you want all url paths starting with "country" to go to a seperate router you could set it up like so:
+So if you wanted all url paths starting with "country" to go to a seperate router you could set it up like so:
 
     var CountrySubRouter = Marionette.SubRouter.extend({
   	  	controller: subController,
@@ -39,8 +38,7 @@ Now to start the SubRouter all you need to do is create an instance of it passin
 
     var subRouter = new CountrySubRouter("country");
     
-Licence
-=======
+##License
 
 The MIT License (MIT)
 
