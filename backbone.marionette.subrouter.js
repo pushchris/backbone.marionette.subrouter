@@ -4,9 +4,9 @@
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['underscore', 'backbone'], factory);
+        define(['underscore', 'backbone', 'marionette'], factory);
     } else {
-        factory(_, Backbone);
+        factory(_, Backbone, Marionette);
     }
 }(function(_, Backbone) {
     Marionette.SubRouter = Marionette.AppRouter.extend({
@@ -78,7 +78,6 @@
                 Backbone.history.loadUrl(hash);
             }
         }
- 
     });
  
     return Marionette.SubRouter;
