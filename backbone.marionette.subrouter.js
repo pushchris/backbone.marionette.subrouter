@@ -28,17 +28,17 @@
             // option to "true" and the sub-router will automatically create those routes for you.
             var createTrailingSlashRoutes = options && options.createTrailingSlashRoutes;
  
-            if(this.appRoutes) {
+            if (this.appRoutes) {
  
-                if(options && options.controller) {
+                if (options && options.controller) {
                     this.controller = options.controller;
                 }
  
                 _.each(this.appRoutes, function(callback, path) {
-                    if(path) {
+                    if (path) {
                         // Strip off any leading slashes in the sub-route path,
                         // since we already handle inserting them when needed.
-                        if(path.substr(0) === "/") {
+                        if (path.substr(0) === "/") {
                             path = path.substr(1, path.length);
                         }
  
@@ -52,7 +52,7 @@
                         // are simply registered using the prefix as the route path.
                         routes[prefix] = callback;
  
-                        if(createTrailingSlashRoutes) {
+                        if (createTrailingSlashRoutes) {
                             routes[prefix + "/"] = callback;
                         }
                     }
@@ -66,19 +66,19 @@
 
             // grab the full URL
             var hash;
-            if(Backbone.history.fragment) {
+            if (Backbone.history.fragment) {
                 hash = Backbone.history.getFragment();
             } else {
                 hash = Backbone.history.getHash();
             }
 
-			_.every(this.appRoutes, function(key, route){
-				if(hash.match(Backbone.Router.prototype._routeToRegExp(route))) {
-					Backbone.history.loadUrl(hash);
-					return false;
-				}
-				return true;
-			}, this);
+            _.every(this.appRoutes, function(key, route){
+                if (hash.match(Backbone.Router.prototype._routeToRegExp(route))) {
+                    Backbone.history.loadUrl(hash);
+                    return false;
+                }
+                return true;
+            }, this);
         }
     });
  
