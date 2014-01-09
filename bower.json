@@ -1,0 +1,27 @@
+{
+  "name": "Backbone Marionette SubRouter",
+  "version": "0.0.2",
+  "homepage": "https://github.com/whyohwhyamihere/backbone.marionette.subrouter",
+  "authors": [
+    "Chris Anderson <hi@chrisanderson.io>"
+  ],
+  "description": "A subrouter allowing routes to be split up into and modularized",
+  "main": "backbone.marionette.subrouter.min.js",
+  "keywords": [
+    "Backbone",
+    "Marionette",
+    "Subrouter"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.1"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
