@@ -4,11 +4,11 @@
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['underscore', 'backbone', 'marionette'], factory);
+        define(['underscore', 'backbone', 'backbone.marionette'], factory);
     } else {
         factory(_, Backbone, Marionette);
     }
-}(function(_, Backbone) {
+}(function(_, Backbone, Marionette) {
     Marionette.SubRouter = Marionette.AppRouter.extend({
         constructor: function(prefix, options) {
  
