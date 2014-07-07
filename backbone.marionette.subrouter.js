@@ -4,7 +4,7 @@
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['underscore', 'backbone', 'backbone.marionette'], factory);
+        define(['underscore', 'backbone', 'marionette'], factory);
     } else {
         factory(_, Backbone, Marionette);
     }
