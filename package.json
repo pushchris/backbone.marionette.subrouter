@@ -1,0 +1,9 @@
+{
+	"name": "BackboneMarionetteSubrouter",
+	"version": "0.0.3",
+	"devDependencies": {
+		"grunt": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-watch": "*"
+	}
+}
