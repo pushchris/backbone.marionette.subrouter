@@ -3,8 +3,8 @@
 
 
 (function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['underscore', 'backbone', 'marionette'], factory);
+    if (typeof define === "function" && define.amd) {
+        define(["underscore", "backbone", "marionette"], factory);
     } else {
         factory(_, Backbone, Marionette);
     }
@@ -79,6 +79,17 @@
                 }
                 return true;
             }, this);
+        },
+
+        navigate: function(route, options) {
+            if (route.substr(0, 1) != "/" &&
+                route.indexOf(this.prefix.substr(0, this.prefix.length - 1)) !== 0) {
+
+                route = this.prefix +
+                    (route ? this.separator : "") +
+                    route;
+            }
+            Marionette.AppRouter.prototype.navigate.call(this, route, options);
         }
     });
  
