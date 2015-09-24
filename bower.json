@@ -1,6 +1,6 @@
 {
   "name": "Backbone Marionette SubRouter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/pushchris/backbone.marionette.subrouter",
   "authors": [
     "Chris Anderson <hi@chrisanderson.io>"
@@ -13,8 +13,9 @@
     "Subrouter"
   ],
   "dependencies": {
-    "backbone": "~1.1.0",
-    "underscore": "~1.5.1"
+    "backbone": ">=1.0.0",
+    "underscore": ">=1.0.0",
+    "marionette": ">=1.0.0"
   },
   "license": "MIT",
   "ignore": [
