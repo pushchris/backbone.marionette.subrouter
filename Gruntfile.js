@@ -6,15 +6,15 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         uglify: {
-			options: {
-				mangle: false
-			},
-			my_target: {
-				files: {
-					'backbone.marionette.subrouter.min.js': 'backbone.marionette.subrouter.js'
-				}
-			}
-		},
+            options: {
+                mangle: false
+            },
+            my_target: {
+                files: {
+                    'backbone.marionette.subrouter.min.js': 'backbone.marionette.subrouter.js'
+                }
+            }
+        },
         watch: {
             scripts: {
                 files: ['backbone.marionette.subrouter.js'],
