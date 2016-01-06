@@ -1,5 +1,4 @@
-Backbone Marionette Subrouter
-=============================
+#Backbone Marionette Subrouter
 
 The Backbone Marionette Documentation suggests splitting controllers and routers up among your various modules to reduce the load on any single file and better modularize code, yet provides no easy means of doing so.
 

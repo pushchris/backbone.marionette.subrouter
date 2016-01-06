@@ -1,6 +1,22 @@
 {
-	"name": "BackboneMarionetteSubrouter",
+	"name": "backbone.marionette.subrouter",
 	"version": "0.0.5",
+	"description": "Backbone.marionette.subrouter extends the functionality of Backbone Marionette router such that each of an application's modules can define its own module-specific routes.",
+    "homepage": "https://github.com/pushchris/backbone.marionette.subrouter",
+    "author": {
+        "name": "Chris Anderson",
+        "url": "http://chrisanderson.io"
+    },
+    "github": "https://github.com/pushchris/backbone.marionette.subrouter",
+    "repository": {
+    "type": "git",
+        "url": "git://github.com/pushchris/backbone.marionette.subrouter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/pushchris/backbone.marionette.subrouter/issues"
+    },
+    "license": "MIT",
+	"main": "backbone.marionette.subrouter.js",
 	"devDependencies": {
 		"grunt": "*",
 		"grunt-contrib-uglify": "*",
