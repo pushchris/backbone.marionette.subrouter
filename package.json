@@ -1,6 +1,6 @@
 {
 	"name": "backbone.marionette.subrouter",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Backbone.marionette.subrouter extends the functionality of Backbone Marionette router such that each of an application's modules can define its own module-specific routes.",
     "homepage": "https://github.com/pushchris/backbone.marionette.subrouter",
     "author": {
