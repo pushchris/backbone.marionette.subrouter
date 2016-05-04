@@ -1,6 +1,6 @@
 {
-  "name": "Backbone Marionette SubRouter",
-  "version": "0.0.5",
+  "name": "backbone.marionette.subrouter",
+  "version": "0.0.6",
   "homepage": "https://github.com/pushchris/backbone.marionette.subrouter",
   "authors": [
     "Chris Anderson <hi@chrisanderson.io>"
