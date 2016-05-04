@@ -5,6 +5,8 @@
 (function (factory) {
     if (typeof define === "function" && define.amd) {
         define(["underscore", "backbone", "marionette"], factory);
+    } else if (typeof exports !== "undefined") {
+        module.exports = factory(require("underscore"), require("backbone"), require("marionette"));
     } else {
         factory(_, Backbone, Marionette);
     }
