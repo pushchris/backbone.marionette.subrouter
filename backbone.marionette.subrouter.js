@@ -20,11 +20,11 @@
             this.prefix = prefix = prefix || "";
  
             // SubRoute instances may be instantiated using a prefix with or without a trailing slash.
-            // If the prefix does *not* have a trailing slash, we need to insert a slash as a separator
-            // between the prefix and the sub-route path for each route that we register with Backbone.
-            this.separator = (prefix.slice(-1) === "/")
-                            ? ""
-                            : "/";
+            // If a prefix is set and it does *not* have a trailing slash, we need to insert a slash as
+            // a separator between the prefix and the sub-route path for each route that we register with Backbone.
+            this.separator = (prefix && prefix.slice(-1) !== "/")
+                ? "/"
+                : "";
  
             // If you want to match "books" and "books/" without creating separate routes, set this
             // option to "true" and the sub-router will automatically create those routes for you.
